@@ -25,4 +25,7 @@ Route::post('/edit/{id}', [App\Http\Controllers\ProductController::class, 'updat
 
 Route::get('/add', [App\Http\Controllers\ShoppingCartController::class, 'add']);
 Route::get('/show', [App\Http\Controllers\ShoppingCartController::class, 'show']);
-Route::get('/remove', [App\Http\Controllers\ShoppingCartController::class, 'remove']);
+Route::get('/remove/{rowId}', [App\Http\Controllers\ShoppingCartController::class, 'remove']);
+Route::get('/update', [App\Http\Controllers\ShoppingCartController::class, 'update']);
+Route::get('/destroy', [App\Http\Controllers\ShoppingCartController::class, 'destroy']);
+Route::post('/order/save', [App\Http\Controllers\ShoppingCartController::class, 'save'])->name('saveOrder');
